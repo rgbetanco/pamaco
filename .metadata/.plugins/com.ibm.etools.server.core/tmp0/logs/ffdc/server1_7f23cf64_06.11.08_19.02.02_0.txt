@@ -1,0 +1,1044 @@
+------Start of DE processing------ = [06.11.08 19:02:02:391 PST] , key = java.sql.SQLException com.ibm.ws.rsadapter.jdbc.WSJdbcPreparedStatement.execute 286
+Exception = java.sql.SQLException
+Source = com.ibm.ws.rsadapter.jdbc.WSJdbcPreparedStatement.execute
+probeid = 286
+Stack Dump = java.sql.SQLException: Duplicate entry '268' for key 1
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2921)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1570)
+	at com.mysql.jdbc.ServerPreparedStatement.serverExecute(ServerPreparedStatement.java:1085)
+	at com.mysql.jdbc.ServerPreparedStatement.executeInternal(ServerPreparedStatement.java:670)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:770)
+	at com.mysql.jdbc.jdbc2.optional.PreparedStatementWrapper.execute(PreparedStatementWrapper.java:787)
+	at com.ibm.ws.rsadapter.jdbc.WSJdbcPreparedStatement.execute(WSJdbcPreparedStatement.java:386)
+	at com.nicahost.module.hotelreserve.admin.dao.HotelAdminDAO.copyResToHist1(HotelAdminDAO.java:201)
+	at com.nicahost.common.daemon.SendReservationToHistory.run(SendReservationToHistory.java:29)
+	at java.util.TimerThread.mainLoop(Timer.java:446)
+	at java.util.TimerThread.run(Timer.java:396)
+
+Dump of callerThis = 
+Object type = com.ibm.ws.rsadapter.jdbc.WSJdbcPreparedStatement
+  _______________________________________________________________________
+  
+      First Failure Data Capture information for
+            com.ibm.ws.rsadapter.jdbc.WSJdbcPreparedStatement@57300f68
+  _______________________________________________________________________
+  
+  Displaying FFDC information for wrapper hierarchy,
+
+  beginning from the Connection...
+
+  _______________________________________________________________________
+  
+      First Failure Data Capture information for
+            com.ibm.ws.rsadapter.jdbc.WSJdbcConnection@57cb8f68
+  _______________________________________________________________________
+  
+  com.ibm.ws.rsadapter.jdbc.WSJdbcConnection@57cb8f68
+
+  Transaction Manager global transaction status is
+    STATUS UNKNOWN
+
+  Underlying Connection: com.mysql.jdbc.jdbc2.optional.ConnectionWrapper@192a8f68
+    com.mysql.jdbc.jdbc2.optional.ConnectionWrapper@192a8f68
+
+  Key Object:
+    [B@6d0bcf6c
+
+  DataStoreHelper:
+    com.ibm.websphere.rsadapter.ConnectJDBCDataStoreHelper@7b9ccf76
+
+  Connection Manager:
+    [ConnectionManager]@4cb0cf73
+JNDI Name <jdbc/wasDB2HOTEL>
+shareable <true>
+
+
+  Connection Manager Configuration Data:
+    [Resource-ref settings]
+
+	res-auth:                 1 (APPLICATION)
+	res-isolation-level:      0 (TRANSACTION_NONE)
+	res-sharing-scope:        true (SHAREABLE)
+	res-resolution-control:   0 (RESOLVER_APPLICATION)
+[Other attributes]
+
+isCMP1_x:                 false (not CMP1.x)
+isJMS:                 false (not JMS)
+
+
+  Handle is reserved? false
+
+  AutoCommit value tracked by handle: true
+
+  Detection of multithreaded access is:
+    DISABLED
+
+  Thread id:
+    null
+
+  Wrapper State: 
+    ACTIVE
+
+  Parent wrapper:
+    null
+
+  Child wrappers:
+
+    null
+    com.ibm.ws.rsadapter.jdbc.WSJdbcPreparedStatement@57358f68
+    com.ibm.ws.rsadapter.jdbc.WSJdbcPreparedStatement@57300f68
+    com.ibm.ws.rsadapter.jdbc.WSJdbcPreparedStatement@573c8f68
+  
+  Performance Monitoring Instrumentation:
+    null
+
+  ____________________________________________________________
+
+  Child Wrapper #1
+
+  com.ibm.ws.rsadapter.jdbc.WSJdbcPreparedStatement@57358f68
+
+  Underlying Statement: com.mysql.jdbc.jdbc2.optional.PreparedStatementWrapper@20a44f68
+    com.mysql.jdbc.jdbc2.optional.PreparedStatementWrapper@20a44f68
+
+  Statement properties have changed? false
+
+  key:
+    PSTMT: SELECT * FROM roomreservation WHERE id = ? ORDER BY checkoutdate ASC 1003 1007
+
+  Wrapper State: 
+    ACTIVE
+
+  Parent wrapper:
+    com.ibm.ws.rsadapter.jdbc.WSJdbcConnection@57cb8f68
+
+  Child wrappers:
+
+    null
+    com.ibm.ws.rsadapter.jdbc.WSJdbcResultSet@54bbcf68
+  
+  Performance Monitoring Instrumentation:
+    null
+
+  ____________________________________________________________
+
+  Child Wrapper #1
+
+  com.ibm.ws.rsadapter.jdbc.WSJdbcResultSet@54bbcf68
+
+  Underlying ResultSet: com.mysql.jdbc.ResultSet@54bd0f68
+    com.mysql.jdbc.ResultSet@54bd0f68
+
+  Wrapper State: 
+    ACTIVE
+
+  Parent wrapper:
+    com.ibm.ws.rsadapter.jdbc.WSJdbcPreparedStatement@57358f68
+
+  Child wrappers:
+
+    null
+  
+  Performance Monitoring Instrumentation:
+    null
+
+  ____________________________________________________________
+
+  Child Wrapper #2
+
+  com.ibm.ws.rsadapter.jdbc.WSJdbcPreparedStatement@57300f68
+
+  Underlying Statement: com.mysql.jdbc.jdbc2.optional.PreparedStatementWrapper@3038cf68
+    com.mysql.jdbc.jdbc2.optional.PreparedStatementWrapper@3038cf68
+
+  Statement properties have changed? false
+
+  key:
+    PSTMT: INSERT INTO roomreservationhist (id, roomid, reservationDate, checkindate, checkoutdate, guest, status, total, email, comment, confirmationcode, statusdate, approver, planno) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?) 1003 1007
+
+  Wrapper State: 
+    ACTIVE
+
+  Parent wrapper:
+    com.ibm.ws.rsadapter.jdbc.WSJdbcConnection@57cb8f68
+
+  Child wrappers:
+
+    null
+  
+  Performance Monitoring Instrumentation:
+    null
+
+  ____________________________________________________________
+
+  Child Wrapper #3
+
+  com.ibm.ws.rsadapter.jdbc.WSJdbcPreparedStatement@573c8f68
+
+  Underlying Statement: com.mysql.jdbc.jdbc2.optional.PreparedStatementWrapper@34dc8f68
+    com.mysql.jdbc.jdbc2.optional.PreparedStatementWrapper@34dc8f68
+
+  Statement properties have changed? false
+
+  key:
+    PSTMT: DELETE FROM roomreservation WHERE id=? 1003 1007
+
+  Wrapper State: 
+    ACTIVE
+
+  Parent wrapper:
+    com.ibm.ws.rsadapter.jdbc.WSJdbcConnection@57cb8f68
+
+  Child wrappers:
+
+    null
+  
+  Performance Monitoring Instrumentation:
+    null
+
+  
+  ConnectionRequestInfo:
+    null
+
+  _______________________________________________________________________
+  
+      First Failure Data Capture information for
+            com.ibm.ws.rsadapter.spi.WSManagedConnectionFactoryImpl@666e4f69
+  _______________________________________________________________________
+  
+  Detection of multithreaded access is
+    DISABLED
+
+  DataSource properties:
+    {password=******, databaseName=dbreserv, user=root, serverName=localhost, statementCacheSize=10, dataSourceClass=com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource, dataStoreHelperClass=com.ibm.websphere.rsadapter.ConnectJDBCDataStoreHelper}
+
+  Database Type:
+    null
+
+  DataStoreHelper:
+    com.ibm.websphere.rsadapter.ConnectJDBCDataStoreHelper@7b9ccf76
+
+  Description:
+    null
+
+  InternalDataStoreHelper:
+    com.ibm.ws.rsadapter.spi.InternalDataDirectDataStoreHelper@12180f76
+
+  Login Timeout:
+    0
+
+  Log Writer:
+    null
+
+  Performance Monitoring Instrumentation:
+    null
+
+  Statement Cache Size (maximum):
+    10
+
+  Transaction Resource Registration:
+    dynamic
+
+  Transaction Branches are set to be Loosely Coupled: 
+    false
+
+  Connection Factory Type:
+    com.ibm.ws.rsadapter.jdbc.WSJdbcDataSource
+
+  Implicit Handle Reactivation is
+    ENABLED
+
+  Listing CCI ConnectionFactories:
+
+  
+  Listing JDBC ConnectionFactories (DataSources):
+
+    com.ibm.ejs.j2c.ConnectionManager@4cb0cf73 --> com.ibm.ws.rsadapter.jdbc.WSJdbcDataSource@466b0f70
+  
+  _______________________________________________________________________
+  
+      First Failure Data Capture information for
+            com.ibm.ws.rsadapter.spi.WSRdbDataSource@763f8f69
+  _______________________________________________________________________
+  
+  DataSource Implementation Class Name:
+    com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource
+
+  DataSource Name:
+    null
+
+  DataStoreHelper:
+    com.ibm.websphere.rsadapter.ConnectJDBCDataStoreHelper@7b9ccf76
+
+  DataSource properties:
+    {password=******, databaseName=dbreserv, user=root, serverName=localhost, statementCacheSize=10, dataSourceClass=com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource, dataStoreHelperClass=com.ibm.websphere.rsadapter.ConnectJDBCDataStoreHelper}
+
+  ONE PHASE ENABLED
+
+  Underlying DataSource Object: com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource@34874f77
+    com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource@34874f77
+
+  _______________________________________________________________________
+  
+      First Failure Data Capture information for
+            com.ibm.ws.rsadapter.spi.WSRdbManagedConnectionImpl@19174f68
+  _______________________________________________________________________
+  
+  ONE PHASE ENABLED
+
+  Database Type:
+    null
+
+  Transaction State:
+    NO_TRANSACTION_ACTIVE
+
+  Statement Cache Size (maximum):
+    10
+
+  Key:
+    [B@6d0bcf6c
+
+  Performance Monitoring Instrumentation:
+    null
+
+  Log Writer:
+    null
+
+  Default AutoCommit:
+    true
+
+  Current AutoCommit:
+    true
+
+  Current Isolation:
+    REPEATABLE READ
+
+  Support isolation level switching: 
+    false
+
+  Current Catalog:
+    dbreserv
+
+  Current readOnly:
+    false
+
+  Current TypeMap:
+    {}
+
+  Thread ID:
+    null
+
+  Already Processed Interaction Pending Event?
+    false
+
+  Underlying Connection Object: com.mysql.jdbc.jdbc2.optional.ConnectionWrapper@192a8f68
+    com.mysql.jdbc.jdbc2.optional.ConnectionWrapper@192a8f68
+
+  Underlying PooledConnection Object: com.mysql.jdbc.jdbc2.optional.MysqlPooledConnection@1ab78f68
+    com.mysql.jdbc.jdbc2.optional.MysqlPooledConnection@1ab78f68
+
+  SQLJ Default Context: null
+    null
+
+  Driver version:
+    mysql-connector-java-3.1.10 ( $Date: 2005/05/19 15:52:23 $, $Revision: 1.1.2.2 $ )
+
+  Database version:
+    5.0.20-nt
+
+  Connection Event Listeners:
+
+    com.ibm.ejs.j2c.ConnectionEventListener@18b54f68
+  
+  Maximum Handle List Size: 15
+
+  Handle Count: 1
+
+  Handles:
+
+    com.ibm.ws.rsadapter.jdbc.WSJdbcConnection@57cb8f68
+    null
+    null
+    null
+    null
+    null
+    null
+    null
+    null
+    null
+    null
+    null
+    null
+    null
+    null
+  
+  State Manager:
+    com.ibm.ws.rsadapter.spi.WSStateManager@1f4e4f68
+
+  XA Resource:
+    null
+
+  SPI LocalTransaction :
+    null
+
+  ManagedConnectionMetaData:
+    null
+
+  Statement Cache:
+    
+com.ibm.ws.rsadapter.spi.CacheMap@18664f68
+Number of entries:   0
+Maximum entries:     10
+Number of buckets:   13
+Maximum bucket size: 5
+Number of discards:  0
+
+BUCKET SIZE PREV NEXT
+  000  000  013  013
+  001  000  013  013
+  002  000  013  013
+  003  000  013  013
+  004  000  013  013
+  005  000  013  013
+  006  000  013  013
+  007  000  013  013
+  008  000  013  013
+  009  000  013  013
+  010  000  013  013
+  011  000  013  013
+  012  000  013  013
+  013  LRU       014
+  014  MRU  013
+
+
+  _______________________________________________________________________
+  
+      First Failure Data Capture information for
+            com.ibm.ws.rsadapter.spi.WSConnectionRequestInfoImpl@4
+  _______________________________________________________________________
+  
+  User Name:
+    null
+
+  Password:
+    null
+
+  Isolation Level:
+    REPEATABLE READ
+
+  Catalog:
+    null
+
+  Is Read Only?
+    null
+
+  Type Map:
+    null
+
+  Hash Code:
+    4
+
+  Support isolation switching on connection:
+    false
+
+  Handle type:
+    java.sql.Connection
+
+  _______________________________________________________________________
+  
+      First Failure Data Capture information for
+            com.ibm.ws.rsadapter.spi.WSManagedConnectionFactoryImpl@666e4f69
+  _______________________________________________________________________
+  
+  Detection of multithreaded access is
+    DISABLED
+
+  DataSource properties:
+    {password=******, databaseName=dbreserv, user=root, serverName=localhost, statementCacheSize=10, dataSourceClass=com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource, dataStoreHelperClass=com.ibm.websphere.rsadapter.ConnectJDBCDataStoreHelper}
+
+  Database Type:
+    null
+
+  DataStoreHelper:
+    com.ibm.websphere.rsadapter.ConnectJDBCDataStoreHelper@7b9ccf76
+
+  Description:
+    null
+
+  InternalDataStoreHelper:
+    com.ibm.ws.rsadapter.spi.InternalDataDirectDataStoreHelper@12180f76
+
+  Login Timeout:
+    0
+
+  Log Writer:
+    null
+
+  Performance Monitoring Instrumentation:
+    null
+
+  Statement Cache Size (maximum):
+    10
+
+  Transaction Resource Registration:
+    dynamic
+
+  Transaction Branches are set to be Loosely Coupled: 
+    false
+
+  Connection Factory Type:
+    com.ibm.ws.rsadapter.jdbc.WSJdbcDataSource
+
+  Implicit Handle Reactivation is
+    ENABLED
+
+  Listing CCI ConnectionFactories:
+
+  
+  Listing JDBC ConnectionFactories (DataSources):
+
+    com.ibm.ejs.j2c.ConnectionManager@4cb0cf73 --> com.ibm.ws.rsadapter.jdbc.WSJdbcDataSource@466b0f70
+  
+  _______________________________________________________________________
+  
+      First Failure Data Capture information for
+            com.ibm.ws.rsadapter.spi.WSRdbDataSource@763f8f69
+  _______________________________________________________________________
+  
+  DataSource Implementation Class Name:
+    com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource
+
+  DataSource Name:
+    null
+
+  DataStoreHelper:
+    com.ibm.websphere.rsadapter.ConnectJDBCDataStoreHelper@7b9ccf76
+
+  DataSource properties:
+    {password=******, databaseName=dbreserv, user=root, serverName=localhost, statementCacheSize=10, dataSourceClass=com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource, dataStoreHelperClass=com.ibm.websphere.rsadapter.ConnectJDBCDataStoreHelper}
+
+  ONE PHASE ENABLED
+
+  Underlying DataSource Object: com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource@34874f77
+    com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource@34874f77
+
+
+==> Performing default dump from com.ibm.ws.rsadapter.DiagnosticModuleForAdapter  = Wed Nov 08 19:02:02 PST 2006
+This is a FFDC log generated for the Default Resource Adapter from source = com.ibm.ws.rsadapter.jdbc.WSJdbcPreparedStatement.execute
+The exception caught = java.sql.SQLException: Duplicate entry '268' for key 1
+Operating System = Windows XP 5.1 x86
+Classpath = C:\Program Files\IBM\WebSphere Studio\Application Developer\v5.1.2\runtimes\base_v51/properties;C:\Program Files\IBM\WebSphere Studio\Application Developer\v5.1.2\runtimes\base_v51/properties;C:\Program Files\IBM\WebSphere Studio\Application Developer\v5.1.2\runtimes\base_v51/lib/bootstrap.jar;C:\Program Files\IBM\WebSphere Studio\Application Developer\v5.1.2\runtimes\base_v51/lib/j2ee.jar;C:\Program Files\IBM\WebSphere Studio\Application Developer\v5.1.2\runtimes\base_v51/lib/lmproxy.jar;C:\Program Files\IBM\WebSphere Studio\Application Developer\v5.1.2\runtimes\base_v51/lib/urlprotocols.jar;C:/Program Files/IBM/WebSphere Studio/Application Developer/v5.1.2/wstools/eclipse/plugins/com.ibm.etools.websphere.tools.common_5.1.1.1/runtime/wteServers.jar;C:/Program Files/IBM/WebSphere Studio/Application Developer/v5.1.2/wstools/eclipse/plugins/com.ibm.etools.websphere.tools.common_5.1.1.1/runtime/wasToolsCommon.jar
+Ext dirs = C:\Program Files\IBM\WebSphere Studio\Application Developer\v5.1.2\runtimes\base_v51\java\jre\lib\ext
+Other related data. If null, nothing was passed in = 
+null
+
+The Objects' instance variables are printed below recursively 2 levels deep = 
+Object type = com.ibm.ws.rsadapter.jdbc.WSJdbcPreparedStatement
+  _______________________________________________________________________
+  
+      First Failure Data Capture information for
+            com.ibm.ws.rsadapter.jdbc.WSJdbcPreparedStatement@57300f68
+  _______________________________________________________________________
+  
+  Displaying FFDC information for wrapper hierarchy,
+
+  beginning from the Connection...
+
+  _______________________________________________________________________
+  
+      First Failure Data Capture information for
+            com.ibm.ws.rsadapter.jdbc.WSJdbcConnection@57cb8f68
+  _______________________________________________________________________
+  
+  com.ibm.ws.rsadapter.jdbc.WSJdbcConnection@57cb8f68
+
+  Transaction Manager global transaction status is
+    STATUS UNKNOWN
+
+  Underlying Connection: com.mysql.jdbc.jdbc2.optional.ConnectionWrapper@192a8f68
+    com.mysql.jdbc.jdbc2.optional.ConnectionWrapper@192a8f68
+
+  Key Object:
+    [B@6d0bcf6c
+
+  DataStoreHelper:
+    com.ibm.websphere.rsadapter.ConnectJDBCDataStoreHelper@7b9ccf76
+
+  Connection Manager:
+    [ConnectionManager]@4cb0cf73
+JNDI Name <jdbc/wasDB2HOTEL>
+shareable <true>
+
+
+  Connection Manager Configuration Data:
+    [Resource-ref settings]
+
+	res-auth:                 1 (APPLICATION)
+	res-isolation-level:      0 (TRANSACTION_NONE)
+	res-sharing-scope:        true (SHAREABLE)
+	res-resolution-control:   0 (RESOLVER_APPLICATION)
+[Other attributes]
+
+isCMP1_x:                 false (not CMP1.x)
+isJMS:                 false (not JMS)
+
+
+  Handle is reserved? false
+
+  AutoCommit value tracked by handle: true
+
+  Detection of multithreaded access is:
+    DISABLED
+
+  Thread id:
+    null
+
+  Wrapper State: 
+    ACTIVE
+
+  Parent wrapper:
+    null
+
+  Child wrappers:
+
+    null
+    com.ibm.ws.rsadapter.jdbc.WSJdbcPreparedStatement@57358f68
+    com.ibm.ws.rsadapter.jdbc.WSJdbcPreparedStatement@57300f68
+    com.ibm.ws.rsadapter.jdbc.WSJdbcPreparedStatement@573c8f68
+  
+  Performance Monitoring Instrumentation:
+    null
+
+  ____________________________________________________________
+
+  Child Wrapper #1
+
+  com.ibm.ws.rsadapter.jdbc.WSJdbcPreparedStatement@57358f68
+
+  Underlying Statement: com.mysql.jdbc.jdbc2.optional.PreparedStatementWrapper@20a44f68
+    com.mysql.jdbc.jdbc2.optional.PreparedStatementWrapper@20a44f68
+
+  Statement properties have changed? false
+
+  key:
+    PSTMT: SELECT * FROM roomreservation WHERE id = ? ORDER BY checkoutdate ASC 1003 1007
+
+  Wrapper State: 
+    ACTIVE
+
+  Parent wrapper:
+    com.ibm.ws.rsadapter.jdbc.WSJdbcConnection@57cb8f68
+
+  Child wrappers:
+
+    null
+    com.ibm.ws.rsadapter.jdbc.WSJdbcResultSet@54bbcf68
+  
+  Performance Monitoring Instrumentation:
+    null
+
+  ____________________________________________________________
+
+  Child Wrapper #1
+
+  com.ibm.ws.rsadapter.jdbc.WSJdbcResultSet@54bbcf68
+
+  Underlying ResultSet: com.mysql.jdbc.ResultSet@54bd0f68
+    com.mysql.jdbc.ResultSet@54bd0f68
+
+  Wrapper State: 
+    ACTIVE
+
+  Parent wrapper:
+    com.ibm.ws.rsadapter.jdbc.WSJdbcPreparedStatement@57358f68
+
+  Child wrappers:
+
+    null
+  
+  Performance Monitoring Instrumentation:
+    null
+
+  ____________________________________________________________
+
+  Child Wrapper #2
+
+  com.ibm.ws.rsadapter.jdbc.WSJdbcPreparedStatement@57300f68
+
+  Underlying Statement: com.mysql.jdbc.jdbc2.optional.PreparedStatementWrapper@3038cf68
+    com.mysql.jdbc.jdbc2.optional.PreparedStatementWrapper@3038cf68
+
+  Statement properties have changed? false
+
+  key:
+    PSTMT: INSERT INTO roomreservationhist (id, roomid, reservationDate, checkindate, checkoutdate, guest, status, total, email, comment, confirmationcode, statusdate, approver, planno) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?) 1003 1007
+
+  Wrapper State: 
+    ACTIVE
+
+  Parent wrapper:
+    com.ibm.ws.rsadapter.jdbc.WSJdbcConnection@57cb8f68
+
+  Child wrappers:
+
+    null
+  
+  Performance Monitoring Instrumentation:
+    null
+
+  ____________________________________________________________
+
+  Child Wrapper #3
+
+  com.ibm.ws.rsadapter.jdbc.WSJdbcPreparedStatement@573c8f68
+
+  Underlying Statement: com.mysql.jdbc.jdbc2.optional.PreparedStatementWrapper@34dc8f68
+    com.mysql.jdbc.jdbc2.optional.PreparedStatementWrapper@34dc8f68
+
+  Statement properties have changed? false
+
+  key:
+    PSTMT: DELETE FROM roomreservation WHERE id=? 1003 1007
+
+  Wrapper State: 
+    ACTIVE
+
+  Parent wrapper:
+    com.ibm.ws.rsadapter.jdbc.WSJdbcConnection@57cb8f68
+
+  Child wrappers:
+
+    null
+  
+  Performance Monitoring Instrumentation:
+    null
+
+  
+  ConnectionRequestInfo:
+    null
+
+  _______________________________________________________________________
+  
+      First Failure Data Capture information for
+            com.ibm.ws.rsadapter.spi.WSManagedConnectionFactoryImpl@666e4f69
+  _______________________________________________________________________
+  
+  Detection of multithreaded access is
+    DISABLED
+
+  DataSource properties:
+    {password=******, databaseName=dbreserv, user=root, serverName=localhost, statementCacheSize=10, dataSourceClass=com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource, dataStoreHelperClass=com.ibm.websphere.rsadapter.ConnectJDBCDataStoreHelper}
+
+  Database Type:
+    null
+
+  DataStoreHelper:
+    com.ibm.websphere.rsadapter.ConnectJDBCDataStoreHelper@7b9ccf76
+
+  Description:
+    null
+
+  InternalDataStoreHelper:
+    com.ibm.ws.rsadapter.spi.InternalDataDirectDataStoreHelper@12180f76
+
+  Login Timeout:
+    0
+
+  Log Writer:
+    null
+
+  Performance Monitoring Instrumentation:
+    null
+
+  Statement Cache Size (maximum):
+    10
+
+  Transaction Resource Registration:
+    dynamic
+
+  Transaction Branches are set to be Loosely Coupled: 
+    false
+
+  Connection Factory Type:
+    com.ibm.ws.rsadapter.jdbc.WSJdbcDataSource
+
+  Implicit Handle Reactivation is
+    ENABLED
+
+  Listing CCI ConnectionFactories:
+
+  
+  Listing JDBC ConnectionFactories (DataSources):
+
+    com.ibm.ejs.j2c.ConnectionManager@4cb0cf73 --> com.ibm.ws.rsadapter.jdbc.WSJdbcDataSource@466b0f70
+  
+  _______________________________________________________________________
+  
+      First Failure Data Capture information for
+            com.ibm.ws.rsadapter.spi.WSRdbDataSource@763f8f69
+  _______________________________________________________________________
+  
+  DataSource Implementation Class Name:
+    com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource
+
+  DataSource Name:
+    null
+
+  DataStoreHelper:
+    com.ibm.websphere.rsadapter.ConnectJDBCDataStoreHelper@7b9ccf76
+
+  DataSource properties:
+    {password=******, databaseName=dbreserv, user=root, serverName=localhost, statementCacheSize=10, dataSourceClass=com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource, dataStoreHelperClass=com.ibm.websphere.rsadapter.ConnectJDBCDataStoreHelper}
+
+  ONE PHASE ENABLED
+
+  Underlying DataSource Object: com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource@34874f77
+    com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource@34874f77
+
+  _______________________________________________________________________
+  
+      First Failure Data Capture information for
+            com.ibm.ws.rsadapter.spi.WSRdbManagedConnectionImpl@19174f68
+  _______________________________________________________________________
+  
+  ONE PHASE ENABLED
+
+  Database Type:
+    null
+
+  Transaction State:
+    NO_TRANSACTION_ACTIVE
+
+  Statement Cache Size (maximum):
+    10
+
+  Key:
+    [B@6d0bcf6c
+
+  Performance Monitoring Instrumentation:
+    null
+
+  Log Writer:
+    null
+
+  Default AutoCommit:
+    true
+
+  Current AutoCommit:
+    true
+
+  Current Isolation:
+    REPEATABLE READ
+
+  Support isolation level switching: 
+    false
+
+  Current Catalog:
+    dbreserv
+
+  Current readOnly:
+    false
+
+  Current TypeMap:
+    {}
+
+  Thread ID:
+    null
+
+  Already Processed Interaction Pending Event?
+    false
+
+  Underlying Connection Object: com.mysql.jdbc.jdbc2.optional.ConnectionWrapper@192a8f68
+    com.mysql.jdbc.jdbc2.optional.ConnectionWrapper@192a8f68
+
+  Underlying PooledConnection Object: com.mysql.jdbc.jdbc2.optional.MysqlPooledConnection@1ab78f68
+    com.mysql.jdbc.jdbc2.optional.MysqlPooledConnection@1ab78f68
+
+  SQLJ Default Context: null
+    null
+
+  Driver version:
+    mysql-connector-java-3.1.10 ( $Date: 2005/05/19 15:52:23 $, $Revision: 1.1.2.2 $ )
+
+  Database version:
+    5.0.20-nt
+
+  Connection Event Listeners:
+
+    com.ibm.ejs.j2c.ConnectionEventListener@18b54f68
+  
+  Maximum Handle List Size: 15
+
+  Handle Count: 1
+
+  Handles:
+
+    com.ibm.ws.rsadapter.jdbc.WSJdbcConnection@57cb8f68
+    null
+    null
+    null
+    null
+    null
+    null
+    null
+    null
+    null
+    null
+    null
+    null
+    null
+    null
+  
+  State Manager:
+    com.ibm.ws.rsadapter.spi.WSStateManager@1f4e4f68
+
+  XA Resource:
+    null
+
+  SPI LocalTransaction :
+    null
+
+  ManagedConnectionMetaData:
+    null
+
+  Statement Cache:
+    
+com.ibm.ws.rsadapter.spi.CacheMap@18664f68
+Number of entries:   0
+Maximum entries:     10
+Number of buckets:   13
+Maximum bucket size: 5
+Number of discards:  0
+
+BUCKET SIZE PREV NEXT
+  000  000  013  013
+  001  000  013  013
+  002  000  013  013
+  003  000  013  013
+  004  000  013  013
+  005  000  013  013
+  006  000  013  013
+  007  000  013  013
+  008  000  013  013
+  009  000  013  013
+  010  000  013  013
+  011  000  013  013
+  012  000  013  013
+  013  LRU       014
+  014  MRU  013
+
+
+  _______________________________________________________________________
+  
+      First Failure Data Capture information for
+            com.ibm.ws.rsadapter.spi.WSConnectionRequestInfoImpl@4
+  _______________________________________________________________________
+  
+  User Name:
+    null
+
+  Password:
+    null
+
+  Isolation Level:
+    REPEATABLE READ
+
+  Catalog:
+    null
+
+  Is Read Only?
+    null
+
+  Type Map:
+    null
+
+  Hash Code:
+    4
+
+  Support isolation switching on connection:
+    false
+
+  Handle type:
+    java.sql.Connection
+
+  _______________________________________________________________________
+  
+      First Failure Data Capture information for
+            com.ibm.ws.rsadapter.spi.WSManagedConnectionFactoryImpl@666e4f69
+  _______________________________________________________________________
+  
+  Detection of multithreaded access is
+    DISABLED
+
+  DataSource properties:
+    {password=******, databaseName=dbreserv, user=root, serverName=localhost, statementCacheSize=10, dataSourceClass=com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource, dataStoreHelperClass=com.ibm.websphere.rsadapter.ConnectJDBCDataStoreHelper}
+
+  Database Type:
+    null
+
+  DataStoreHelper:
+    com.ibm.websphere.rsadapter.ConnectJDBCDataStoreHelper@7b9ccf76
+
+  Description:
+    null
+
+  InternalDataStoreHelper:
+    com.ibm.ws.rsadapter.spi.InternalDataDirectDataStoreHelper@12180f76
+
+  Login Timeout:
+    0
+
+  Log Writer:
+    null
+
+  Performance Monitoring Instrumentation:
+    null
+
+  Statement Cache Size (maximum):
+    10
+
+  Transaction Resource Registration:
+    dynamic
+
+  Transaction Branches are set to be Loosely Coupled: 
+    false
+
+  Connection Factory Type:
+    com.ibm.ws.rsadapter.jdbc.WSJdbcDataSource
+
+  Implicit Handle Reactivation is
+    ENABLED
+
+  Listing CCI ConnectionFactories:
+
+  
+  Listing JDBC ConnectionFactories (DataSources):
+
+    com.ibm.ejs.j2c.ConnectionManager@4cb0cf73 --> com.ibm.ws.rsadapter.jdbc.WSJdbcDataSource@466b0f70
+  
+  _______________________________________________________________________
+  
+      First Failure Data Capture information for
+            com.ibm.ws.rsadapter.spi.WSRdbDataSource@763f8f69
+  _______________________________________________________________________
+  
+  DataSource Implementation Class Name:
+    com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource
+
+  DataSource Name:
+    null
+
+  DataStoreHelper:
+    com.ibm.websphere.rsadapter.ConnectJDBCDataStoreHelper@7b9ccf76
+
+  DataSource properties:
+    {password=******, databaseName=dbreserv, user=root, serverName=localhost, statementCacheSize=10, dataSourceClass=com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource, dataStoreHelperClass=com.ibm.websphere.rsadapter.ConnectJDBCDataStoreHelper}
+
+  ONE PHASE ENABLED
+
+  Underlying DataSource Object: com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource@34874f77
+    com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource@34874f77
+
+
++Data for directive [defaultadapter] obtained. = 
+==> Dump complete for com.ibm.ws.rsadapter.DiagnosticModuleForAdapter  = Wed Nov 08 19:02:02 PST 2006

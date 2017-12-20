@@ -1,0 +1,27 @@
+#chromemenu {
+	WIDTH: 100%; BACKGROUND-COLOR: #99ccff; TEXT-ALIGN: left
+}
+#chromemenu:unknown {
+	CLEAR: both; DISPLAY: block; VISIBILITY: hidden; HEIGHT: 0px; content: "."
+}
+#chromemenu UL {
+	BORDER-RIGHT: #99ccff 1px solid; BORDER-TOP: #99ccff 1px solid; PADDING-LEFT: 0px; FLOAT: left; MARGIN: 0px; FONT: bold 14px arial,helvetica,sans-serif; BORDER-LEFT: #99ccff 1px solid; WIDTH: 100%; BORDER-BOTTOM: #99ccff 1px solid
+}
+#chromemenu UL LI {
+	DISPLAY: inline
+}
+#chromemenu UL LI A {
+	BORDER-RIGHT: black 1px solid; PADDING-RIGHT: 4px; PADDING-LEFT: 5px; FONT-WEIGHT: bold; FLOAT: left; PADDING-BOTTOM: 4px; WIDTH: 116px; COLOR: black; PADDING-TOP: 5px; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+#chromemenu UL LI A:hover {
+	COLOR: gray
+}
+.dropmenudiv {
+	Z-INDEX: 100; VISIBILITY: hidden; FONT: 14px arial,helvetica,sans-serif; BORDER-LEFT: #99ccff 7px solid; WIDTH: 200px; POSITION: absolute; BACKGROUND-COLOR: #336699
+}
+.dropmenudiv A {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 0px; FONT-WEIGHT: bold; PADDING-BOTTOM: 2px; WIDTH: 100%; COLOR: white; TEXT-INDENT: 3px; PADDING-TOP: 2px; TEXT-DECORATION: none
+}
+.dropmenudiv A:hover {
+	COLOR: black; BACKGROUND-COLOR: #99ccff
+}

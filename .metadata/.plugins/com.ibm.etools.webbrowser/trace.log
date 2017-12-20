@@ -1,0 +1,14 @@
+----->----- Web Browser plugin startup ----->-----
+com.ibm.etools.webbrowser - 5.1.1
+Opening browser: WebBrowserEditorInput[http://localhost:9080/ElCocoWeb/jsp/hotelreserve/admin/main.jsp 38 null]
+setURL: http://localhost:9080/ElCocoWeb/jsp/hotelreserve/admin/main.jsp true
+->- Loading .urlMap extension point ->-
+  Loaded url map: com.ibm.etools.webbrowser.standard.urlMap
+-<- Done loading .urlMap extension point -<-
+Navigate: http://localhost:9080/ElCocoWeb/jsp/hotelreserve/admin/main.jsp
+getLocationURL: 
+getLocationURL: http://localhost:9080/ElCocoWeb/jsp/hotelreserve/admin/main.jsp
+setURL: http://localhost:9080/ElCocoWeb/jsp/hotelreserve/admin/main.jsp false
+getLocationURL: http://localhost:9080/ElCocoWeb/jsp/hotelreserve/admin/main.jsp
+setURL: http://localhost:9080/ElCocoWeb/jsp/hotelreserve/admin/main.jsp false
+----->----- Web Browser plugin shutdown ----->-----

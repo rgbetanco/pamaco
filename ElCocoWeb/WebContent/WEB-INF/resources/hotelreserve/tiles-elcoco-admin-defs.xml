@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE component-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN" 
+								"http://jakarta.apche.org/struts/dtds/tiles-config_1_1.dtd" >
+<component-definitions>
+
+  <definition name="bac.default" path="/jsp/hotelreserve/layouts/cocoAdminLayout.jsp" >
+  	<put name="header.layout" value="/jsp/hotelreserve/layouts/cocoAdminDropMenu.jsp" />
+  	<!--body-content.layout-->
+  	<!--session.layout-->
+  </definition>
+
+  <definition name="home.layout" extends="bac.default" >
+  	
+  </definition>  
+	<definition name="controlpanel.layout" extends="home.layout">
+		<put name="body-content" value="/jsp/hotelreserve/admin/main.jsp" />
+	</definition>
+
+
+	<definition name="roomtypeinsert.layout"  extends="home.layout">
+		<put name="body-content" value="/jsp/hotelreserve/admin/RoomTypeInsert.jsp" />
+	</definition>
+
+	<definition name="roomtypedetail.layout" path="/jsp/hotelreserve/admin/RoomTypeDetailInfo.jsp">
+	</definition>
+
+	<definition name="roomtypeupdate.layout"  extends="home.layout">
+		<put name="body-content" value="/jsp/hotelreserve/admin/RoomTypeUpdate.jsp" />
+	</definition>
+
+
+
+	<definition name="roominsert.layout"  extends="home.layout">
+		<put name="body-content" value="/jsp/hotelreserve/admin/RoomInsert.jsp" />
+	</definition>  
+	
+	<definition name="roomdetail.layout" path="/jsp/hotelreserve/admin/RoomDetailInfo.jsp" >	
+	</definition>
+
+	<definition name="roomupdate.layout"  extends="home.layout">
+		<put name="body-content" value="/jsp/hotelreserve/admin/RoomUpdate.jsp" />
+	</definition>  
+
+
+
+
+
+
+	<definition name="roomplanmain.layout"  extends="home.layout">
+		<put name="body-content" value="/jsp/hotelreserve/admin/RoomPlanMain.jsp" />
+	</definition>    
+	
+	<definition name="roomplandetail.layout" path="/jsp/hotelreserve/admin/RoomPlanDetailInfo.jsp">
+	</definition>
+	
+	<definition name="planratemain.layout"  extends="home.layout">
+		<put name="body-content" value="/jsp/hotelreserve/admin/PlanRateMain.jsp" />
+	</definition>    
+
+	<definition name="planratedetail.layout" path="/jsp/hotelreserve/admin/PlanRateDetailInfo.jsp">
+	</definition>
+	
+	<definition name="userinsert.layout"  extends="home.layout">
+		<put name="body-content" value="/jsp/hotelreserve/admin/UserInsert.jsp" />
+	</definition>    
+	
+	<definition name="userdetail.layout" path="/jsp/hotelreserve/admin/UserDetailInfo.jsp">
+	</definition>
+	
+	<definition name="userupdate.layout"  extends="home.layout">
+		<put name="body-content" value="/jsp/hotelreserve/admin/UserUpdate.jsp" />
+	</definition>
+	
+	<definition name="userupdatepwd.layout"  extends="home.layout">
+		<put name="body-content" value="/jsp/hotelreserve/admin/UserUpdatePwd.jsp" />
+	</definition>	
+	
+	<definition name="usergroupinsert.layout"  extends="home.layout">
+		<put name="body-content" value="/jsp/hotelreserve/admin/UserGroupInsert.jsp" />
+	</definition>    
+	
+	<definition name="usergroupdetail.layout" path="/jsp/hotelreserve/admin/UserGroupDetailInfo.jsp">
+	</definition>
+	
+	<definition name="usergroupupdate.layout"  extends="home.layout">
+		<put name="body-content" value="/jsp/hotelreserve/admin/UserGroupUpdate.jsp" />
+	</definition>
+	
+	<definition name="grouppermission.layout"  extends="home.layout">
+		<put name="body-content" value="/jsp/hotelreserve/admin/GroupPermissions.jsp" />
+	</definition>
+	
+	<definition name="userforgroup.layout"  extends="home.layout">
+		<put name="body-content" value="/jsp/hotelreserve/admin/UsersForGroup.jsp" />
+	</definition>
+
+	<definition name="pendingreserve.layout"  extends="home.layout">
+		<put name="body-content" value="/jsp/hotelreserve/admin/ReservePending.jsp" />
+	</definition>
+
+	<definition name="approvedeny.layout" extends="home.layout">
+		<put name="body-content" value="/jsp/hotelreserve/admin/Confirmation.jsp" />
+	</definition>
+
+	<definition name="queryreservation.layout" extends="home.layout">
+		<put name="body-content" value="/jsp/hotelreserve/admin/ReservationQuery.jsp" />
+	</definition>
+
+	<definition name="calendarblocked.layout" extends="home.layout">
+		<put name="body-content" value="/jsp/hotelreserve/admin/checkAvailabilityAdmin.jsp" />
+	</definition>
+
+	<definition name="rptGenstatistics.layout" extends="home.layout">
+		<put name="body-content" value="/jsp/hotelreserve/admin/RptGenStatistics.jsp" />
+	</definition>
+	<definition name="rptstatistics.layout" extends="home.layout">
+		<put name="body-content" value="/jsp/hotelreserve/admin/Statistics2.html" />
+	</definition>	
+	
+	
+  <definition name="internal.layout" extends="bac.default" >
+
+  </definition>  
+
+	<definition name="placedReservation.layout" extends="internal.layout">	  	
+		<put name="body-content" value="/jsp/hotelreserve/placedReservations.jsp" />
+	</definition>  	
+
+	<definition name="cancelconfirm.layout" extends="internal.layout">	  	
+		<put name="body-content" value="/jsp/hotelreserve/cancelConfirmation.jsp" />
+	</definition>  		
+	
+
+  <definition name="error.layout" extends="bac.default" >  	
+  	<put name="body-content" value="/jsp/hotelreserve/common/error.jsp" />
+  </definition> 
+  
+  <definition name="admin.layout" extends="bac.default" >
+  	<put name="sessionSelectedDates" value="/jsp/hotelreserve/admin/adminmenu.jsp" />
+  </definition>
+    
+  <definition name="home.left.layout" path="/jsp/hotelreserve/layouts/leftLayout.jsp" >
+
+  </definition>
+
+  <definition name="internal.left.layout" path="/jsp/hotelreserve/layouts/leftLayout.jsp" >
+
+  </definition>
+
+
+	<definition name="login.layout" extends="internal.layout">	  	
+		<put name="body-content" value="/jsp/hotelreserve/login.jsp" />
+	</definition>  
+
+
+	<!-- ****************************************************************************** -->
+	<!-- 						ADMINISTRACION 											-->
+	<!-- ****************************************************************************** -->	
+	<definition name="reservations.layout" extends="admin.layout">		
+		<put name="body-content" value="/jsp/hotelreserve/admin/Reservation.jsp" />
+	</definition> 
+	
+	<definition name="confirmation.layout" extends="admin.layout">
+		<put name="body-content" value="/jsp/hotelreserve/admin/Confirmation.jsp" />
+	</definition>
+		 		
+	<definition name="history.layout" extends="admin.layout">		
+		<put name="body-content" value="/jsp/hotelreserve/admin/History.jsp" />
+	</definition>  	
+	
+	<definition name="room.layout" extends="admin.layout">
+		<put name="body-content" value="/jsp/hotelreserve/admin/Rooms.jsp" />	
+	</definition>
+	
+	<definition name="updateRoom.layout" extends="admin.layout">
+		<put name="body-content" value="/jsp/hotelreserve/admin/Rooms.jsp" />	
+	</definition>
+
+	<definition name="insertRoom.layout" extends="admin.layout">
+		<put name="body-content" value="/jsp/hotelreserve/admin/Rooms.jsp" />
+	</definition>
+	
+	<definition name="confirmedAnulled.layout" extends="admin.layout">
+		<put name="body-content" value="/jsp/hotelreserve/admin/ConfirmedAnulled.jsp" />
+	</definition>
+	
+	<definition name="filter.layout" extends="admin.layout">
+		<put name="body-content" value="/jsp/hotelreserve/admin/ConfirmedAnulled.jsp"/>
+	</definition>
+
+	
+</component-definitions>

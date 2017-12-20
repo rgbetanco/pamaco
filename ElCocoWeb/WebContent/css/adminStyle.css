@@ -1,0 +1,212 @@
+body {
+	color: black;
+	font-family: Tahoma;
+	background-color: #ffffff;
+	font-weight: normal;
+	font-size: 11px;
+	background-image: url(/ElCocoWeb/img/Globe.gif);
+}
+
+A {
+	FONT-WEIGHT: normal;
+	font-size: 11px;
+	COLOR: blue; 
+	TEXT-DECORATION: underline;
+}
+
+A:hover {
+	FONT-WEIGHT: normal;
+	COLOR: #e26200;	
+	TEXT-DECORATION: underline;
+}
+
+
+table {
+	color: black;
+	font-family: Tahoma;
+	background-color: #ffffff;
+	font-weight: normal;
+	font-size: 11px;
+	margin: 1px	
+}
+
+th {
+	color: white;
+	background-color: #7f7fbf;
+	margin: 3px
+}
+
+th A {
+	color: white;
+	font-weight: bold;
+}
+
+th A:hover {
+	font-weight: bold;
+	color: orange;
+}
+
+tr.white{
+	background-color: #ffffff;
+}
+
+tr.gray {
+	background-color: #efefef;
+}
+
+.daterror { 
+	text-align:left; 
+	font-family:Verdana, Arial, Helvetica, sans-serif; 
+	font-size:8pt; 
+	font-style:normal; 
+	font-weight: normal; 
+	color: red; 
+}
+
+.checkoutTitle { 
+	text-align:left; 
+	font-family:Arial, Helvetica, sans-serif; 
+	font-size:18pt; 
+	font-style:normal; 
+	font-weight: bold; 
+	color: black; 
+}
+
+.checkoutSubTitle { 
+	text-align:left; 
+	font-family:Arial, Helvetica, sans-serif; 
+	font-size:14pt; 
+	font-style:normal; 
+	font-weight: bold; 
+	color: black; 
+}
+
+
+#tableRed {
+	color: black;
+	font-family: Tahoma;
+	background-color: #fffff2;
+	font-weight: normal;
+	font-size: 11px;
+	border-color: red;
+	padding: 5px;
+	border-width: thin;
+	border-style: solid	
+}
+
+#tableRed TH {
+	background-color: red;
+}
+
+#tableRed TD {
+	color: red
+}
+
+
+#tableGreen {
+	color: black;
+	font-family: Tahoma;
+	background-color: #fffff2;
+	font-weight: normal;
+	font-size: 11px;
+	border-color: green;
+	padding: 5px;
+	border-width: thin;
+	border-style: solid	
+}
+
+#tableGreen TH {
+	background-color: green;
+}
+
+#tableGreen TD {
+	color: green;
+}
+
+#filterTable {
+	color: #333333;
+	font-family:Tahoma;
+	font-weight: normal;
+	font-size: 11px;
+	margin: 0px;
+	border-bottom-color: #d4d0c8;
+	border-bottom-width: thin;
+	border-bottom-style: solid;
+
+}
+
+#filterTable TH.leftCorner {
+	color:black;
+	font-family:Tahoma;
+	font-weight: bold;
+	font-size: 9.0pt;	
+	background-image: url("/ElCocoWeb/img/realestates/rounded1.gif");
+	border: none;
+	line-height: 24px;
+	
+}
+
+#filterTable TH.rightCorner {
+	color:white;
+	font-family:Tahoma;
+	font-weight: bold;
+	font-size: 11pt;	
+	background-image: url("/ElCocoWeb/img/realestates/rounded12.gif");
+	border: none;
+	line-height: 24px;	
+}
+
+#filterTable TD {
+	font-family:Tahoma;
+	font-weight: normal;
+	font-size: 11px;
+	background-color: #ffffff;
+	vertical-align: top;
+	line-height: 20px;
+	border-left-color: #d4d0c8;
+	border-right-color: #d4d0c8;
+	border-left-style: solid;
+	border-left-width: thin;
+	border-right-style: solid;
+	border-right-width: thin;
+	margin: 0px;
+	padding-left: 8px;
+	padding-right: 8px;
+	text-indent: 5px;
+	position: relative;
+	clip: rect(auto, auto, auto, 10px);
+}
+
+#filterTable TD.leftNavTitle {
+	font-family:Tahoma;
+	font-weight: normal;
+	font-weight: bold;
+	font-size: 11px;
+	color: #c60;
+	background-color: #ffffff;
+	vertical-align: top;
+	line-height: 20px;
+	border-left-color: #d4d0c8;
+	border-right-color: #d4d0c8;
+	border-left-style: solid;
+	border-left-width: thin;
+	border-right-style: solid;
+	border-right-width: thin;
+	margin-top: 10px;
+	margin-bottom: 6px;	
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+#filterTable A {
+	FONT-WEIGHT: normal;
+	font-size: 12px;
+	COLOR: blue; 
+	TEXT-DECORATION: underline;
+}
+
+#filterTable A:hover {
+	FONT-WEIGHT: normal;
+	COLOR: #e26200;	
+	TEXT-DECORATION: underline;
+}

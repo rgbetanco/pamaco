@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.etools.commonarchive.looseconfig:LooseConfiguration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.etools.commonarchive.looseconfig="commonarchive.looseconfig.xmi">
+  <applications uri="C:\Documents and Settings\Ronald\My Documents\IBM\wsappdev51\pamaco4\DefaultEAR" binariesPath="C:\Documents and Settings\Ronald\My Documents\IBM\wsappdev51\pamaco4\DefaultEAR" resourcesPath="C:\Documents and Settings\Ronald\My Documents\IBM\wsappdev51\pamaco4\DefaultEAR">
+    <looseArchives xsi:type="com.ibm.etools.commonarchive.looseconfig:LooseWARFile" uri="ElCocoWeb.war" binariesPath="C:\Documents and Settings\Ronald\My Documents\IBM\wsappdev51\pamaco4\ElCocoWeb\WebContent" resourcesPath="C:\Documents and Settings\Ronald\My Documents\IBM\wsappdev51\pamaco4\ElCocoWeb\WebContent"/>
+  </applications>
+</com.ibm.etools.commonarchive.looseconfig:LooseConfiguration>

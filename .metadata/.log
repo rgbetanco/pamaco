@@ -1,0 +1,20 @@
+!SESSION Oct 11, 2006 17:36:57.531 ---------------------------------------------
+java.fullversion=J2RE 1.3.1 IBM J9 build 20031201 (JIT enabled)
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments: -os win32 -ws win32 -arch x86 -data C:\Documents and Settings\Ronald\My Documents\IBM\wsappdev51\pamaco4 -install file:C:/Program Files/IBM/WebSphere Studio/Application Developer/v5.1.2/eclipse/
+!ENTRY org.eclipse.debug.ui 4 120 Oct 11, 2006 17:36:57.578
+!MESSAGE Error logged from Debug UI: 
+!STACK 1
+com.ibm.etools.server.core.ServerException: Cannot start the server because it is already running.
+	at java.lang.Throwable.<init>(Throwable.java)
+	at java.lang.Throwable.<init>(Throwable.java)
+	at org.eclipse.core.runtime.CoreException.<init>(CoreException.java:35)
+	at com.ibm.etools.server.core.ServerException.<init>(ServerException.java:25)
+	at com.ibm.etools.server.core.internal.ServerLaunchConfigurationDelegate.launch(ServerLaunchConfigurationDelegate.java:78)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:156)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:676)
+	at org.eclipse.debug.ui.DebugUITools.buildAndLaunch(DebugUITools.java:538)
+	at org.eclipse.debug.ui.DebugUITools$2.run(DebugUITools.java:487)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:101)
+!ENTRY com.ibm.etools.server.core 4 0 Oct 11, 2006 17:37:15.546
+!MESSAGE Cannot start the server because it is already running.

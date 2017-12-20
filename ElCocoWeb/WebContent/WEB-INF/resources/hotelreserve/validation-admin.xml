@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE form-validation PUBLIC
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1//EN"
+          "http://jakarta.apache.org/commons/dtds/validator_1_1.dtd">
+
+<form-validation>
+
+<!--
+     This is a blank Validator form file with a commented examples.
+-->
+
+    <global>
+
+
+        <constant>
+            <constant-name>postalCode</constant-name>
+            <constant-value>^\d{5}\d*$</constant-value>
+        </constant>
+
+
+        <constant>
+        	<constant-name>telf</constant-name>
+        	<constant-value>^(\(?(\d{3})\)?[-| ]?)?(\d{3})[-| ]?(\d{4})$</constant-value>
+        </constant>
+    </global>
+
+
+
+    <formset>
+    	<form name="signInForm">
+    		<field property="userId" depends="required">
+	    		<arg key="label.userid"></arg>
+    		</field>
+    		<field property="password" depends="required">
+	    		<arg key="label.password"></arg>
+    		</field>
+    	</form>
+
+    	<form name="forgotPwdForm">
+    		<field property="userId" depends="required">
+	    		<arg key="label.userid"></arg>
+    		</field>
+		</form>
+
+    	<form name="changePwdForm">
+    		<field property="userId" depends="required">
+	    		<arg key="label.userId"></arg>
+    		</field>
+    		<field property="oldPassword" depends="required">
+	    		<arg key="label.password"></arg>
+    		</field>
+        	<field property="password" depends="required,twofields">
+        		<arg key="label.password"></arg>
+        		<var>
+        			<var-name>secondProperty</var-name>
+        			<var-value>retypepassword</var-value>
+        		</var>
+        	</field>    		
+    	</form>    	    
+    
+    
+        <form name="roomTypeForm">
+             <field
+                property="description"
+                depends="required">
+            	<arg key="error.field.description"></arg>
+            </field>
+        </form>
+        
+        <form name="roomForm">
+             <field
+                property="description"
+                depends="required">
+            	<arg key="error.field.description"></arg>
+            </field>
+        </form>
+        
+        <form name="/insertUser">
+        	<field property="userId" depends="required">
+        		<arg key="error.field.userid"></arg>
+        	</field>
+        	<field property="name" depends="required">
+        		<arg key="error.field.name"></arg>
+        	</field>
+
+        	<field property="password" depends="required,twofields">
+        		<arg key="error.field.password"></arg>
+        		<var>
+        			<var-name>secondProperty</var-name>
+        			<var-value>password2</var-value>
+        		</var>
+        	</field>
+        </form>
+        
+        <form name="/updateUser">
+        	<field property="userId" depends="required">
+        		<arg key="error.field.userid"></arg>
+        	</field>
+        	<field property="name" depends="required">
+        		<arg key="error.field.name"></arg>
+        	</field>
+        </form>
+
+        <form name="/updatepwd">
+        	<field property="password" depends="required,twofields">
+        		<arg key="error.field.password"></arg>
+        		<var>
+        			<var-name>secondProperty</var-name>
+        			<var-value>password2</var-value>
+        		</var>
+        	</field>
+        </form>
+     
+        <form name="/insertUserGroup">
+        	<field property="groupName" depends="required">
+        		<arg key="error.field.groupname"></arg>
+        	</field>
+        </form>    
+
+        <form name="/updateUserGroup">
+        	<field property="groupId" depends="required">
+        		<arg key="error.field.groupid"></arg>
+        	</field>        
+        	<field property="groupName" depends="required">
+        		<arg key="error.field.groupname"></arg>
+        	</field>
+        </form>                
+    </formset>
+</form-validation>

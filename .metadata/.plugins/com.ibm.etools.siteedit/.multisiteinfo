@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<multisite-config>
+    <project-data name="ElCocoWeb">
+        <data>
+            <item name="ElCocoWeb" stamp="75"/>
+        </data>
+    </project-data>
+</multisite-config>

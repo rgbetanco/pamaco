@@ -1,0 +1,81 @@
+BODY {
+	MARGIN: 0px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: white
+}
+TD.header {
+	BACKGROUND-IMAGE: url(img/streifen_bg.jpg); BACKGROUND-REPEAT: repeat-x
+}
+TD.header_center {
+	BACKGROUND-IMAGE: url(img/top.jpg); VERTICAL-ALIGN: top; WIDTH: 750px; BACKGROUND-REPEAT: no-repeat; HEIGHT: 73px; TEXT-ALIGN: right
+}
+TD.footer {
+	FONT-SIZE: 10px; HEIGHT: 15px; BACKGROUND-COLOR: #f9f33b; TEXT-ALIGN: center
+}
+TABLE.maintable {
+	BACKGROUND: url(img/content_bg.jpg) white no-repeat center top
+}
+TD.main_content_side_block {
+	BACKGROUND-COLOR: #99ccff
+}
+TD.main_vertical_border {
+	WIDTH: 6px; BACKGROUND-COLOR: #f9f33b
+}
+TD.main_horizontal_border {
+	HEIGHT: 5px; BACKGROUND-COLOR: #f9f33b
+}
+TD.content {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 13px; PADDING-BOTTOM: 5px; VERTICAL-ALIGN: top; WIDTH: 600px; PADDING-TOP: 5px; TEXT-ALIGN: justify
+}
+TD.navibar {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; VERTICAL-ALIGN: top; WIDTH: 150px; PADDING-TOP: 5px
+}
+.breadcrumb {
+	PADDING-LEFT: 10px; FONT-SIZE: 8pt; PADDING-BOTTOM: 0px
+}
+#language {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: white; TEXT-ALIGN: right
+}
+TD.block_headline {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: white; BACKGROUND-COLOR: #3590cf; TEXT-ALIGN: center
+}
+TD.block_content {
+	PADDING-LEFT: 5px; FONT-SIZE: 12px; PADDING-BOTTOM: 5px; WIDTH: 100%; PADDING-TOP: 5px; BACKGROUND-COLOR: #99ccff
+}
+TD.block_spaceline {
+	HEIGHT: 10px
+}
+.page-title {
+	BORDER-BOTTOM: thin ridge; FONT-VARIANT: small-caps
+}
+TABLE.ct_price {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+TD.ct_price_head {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: white; BACKGROUND-COLOR: #0099dd; TEXT-ALIGN: center
+}
+TH.ct_price_head {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: white; BACKGROUND-COLOR: #0099dd; TEXT-ALIGN: center
+}
+TD.ct_price_content {
+	FONT-SIZE: 14px; COLOR: black; BACKGROUND-COLOR: #66ccff; TEXT-ALIGN: left
+}
+TH.ct_price_content {
+	FONT-SIZE: 14px; COLOR: black; BACKGROUND-COLOR: #66ccff; TEXT-ALIGN: left
+}
+TD.ct_price_usd {
+	FONT-SIZE: 14px; COLOR: white; BACKGROUND-COLOR: #0099ff; TEXT-ALIGN: right
+}
+TH.ct_price_usd {
+	FONT-SIZE: 14px; COLOR: white; BACKGROUND-COLOR: #0099ff; TEXT-ALIGN: right
+}
+TD.ct_price_value {
+	FONT-SIZE: 14px; COLOR: white; BACKGROUND-COLOR: #0099ff; TEXT-ALIGN: right
+}
+TH.ct_price_value {
+	FONT-SIZE: 14px; COLOR: white; BACKGROUND-COLOR: #0099ff; TEXT-ALIGN: right
+}
+TD.gallery {
+	TEXT-ALIGN: center
+}
+.xyz {
+	COLOR: red; TEXT-ALIGN: right
+}
